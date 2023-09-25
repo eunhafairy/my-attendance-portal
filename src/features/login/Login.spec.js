@@ -34,11 +34,11 @@ describe("Login", () =>{
             expect(password).toBeInTheDocument()
         })
 
-        // it("shows confirm password textbox", ()=>{
-        //     setup()
-        //     const confirmPassword = screen.getByTestId(textfieldConfirmPassword)
-        //     expect(confirmPassword).toBeInTheDocument()
-        // })
+        it("shows login button", ()=>{
+            setup()
+            const password = screen.getByTestId(textfieldPassword)
+            expect(password).toBeInTheDocument()
+        })
 
     })
 })

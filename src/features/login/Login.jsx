@@ -1,10 +1,12 @@
 import React from "react";
 import { APP_TITLE } from "../../config/constants";
 import { LOGIN_TEST_ID } from "../../config/test.constants";
+import { TextField } from "../../common/TextField/TextField";
+import { Button } from "../../common/Button/Button";
+import { Form } from "../../common/Form/Form";
 
 export const Login = (props) => {
-  const { textfieldConfirmPassword, textfieldPassword, textfieldUsername } =
-    LOGIN_TEST_ID;
+  const {  textfieldPassword, textfieldUsername, buttonLogin } = LOGIN_TEST_ID;
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -15,71 +17,35 @@ export const Login = (props) => {
           alt="Your Company"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          COLM Time In/Out
+          {APP_TITLE}
         </h2>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" action="#" method="POST">
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Username
-            </label>
-            <div className="mt-2">
-              <input
-                data-testid={textfieldUsername}
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
+        <Form 
+          action="#" 
+          method="POST">
+         
+            <TextField
+              label={'Username'}
+              dataTestId={textfieldUsername}
+              type={'text'}
+              required
+            />
 
-          <div>
-            <div className="flex items-center justify-between">
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Password
-              </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
-                >
-                  Forgot password?
-                </a>
-              </div>
-            </div>
-            <div className="mt-2">
-              <input
-                data-testid={textfieldPassword}
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
+            <TextField
+              label={'Password'}
+              dataTestId={textfieldPassword}
+              type={'password'}
+              required
+            />
 
-          <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Sign in
-            </button>
-          </div>
-        </form>
+            <Button
+            dataTestId={buttonLogin}
+              onClick={()=>console.log('Hello')} 
+              label={'Submit'}
+            />
+        </Form>
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Not a member?{" "}
