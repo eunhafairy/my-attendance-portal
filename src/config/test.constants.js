@@ -1,7 +1,10 @@
 export const  LOGIN_TEST_ID = {
     textfieldUsername: 'login_txtfield_username',
     textfieldPassword: 'login_txtfield_password',
-    buttonLogin: 'login_button_login'
+    buttonLogin: 'login_button_login',
+    linkRegister: 'login_link_register',
+    imgLogo: 'img_logo'
+
 
 }
 export const REGISTER_TEST_ID = { 
@@ -16,5 +19,8 @@ export const REGISTER_TEST_ID = {
     textfieldGuardianContact: 'register_txtfield_guardian',
     buttonSubmit: 'register_btn_submit',
     buttonCancel: 'register_btn_cancel',
+}
 
+export const LOADING_ID = {
+    main: 'loading-main-div'
 }

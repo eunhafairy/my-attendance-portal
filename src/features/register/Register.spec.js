@@ -1,7 +1,4 @@
-import { APP_TITLE } from "../../config/constants";
-
 import {cleanup, fireEvent, render, screen} from '@testing-library/react';
-import { LOGIN_TEST_ID } from "../../config/test.constants";
 import { Register } from "./Register";
 
 afterEach(cleanup)

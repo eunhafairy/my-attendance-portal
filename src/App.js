@@ -1,9 +1,11 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from './config/router.config';
 
-import { Login } from './features/login/Login';
+
 
 function App() {
   return (
-      <Login />
+    <RouterProvider router={router} />
   );
 }
 

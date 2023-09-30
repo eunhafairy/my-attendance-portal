@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const TextField = (props) => {
 
-    const { label, dataTestId,name, type='text', required=false } = props
+    const { label, dataTestId, name, type='text', required=false, value, onChange} = props
 
     return(
         <div>
@@ -14,7 +14,9 @@ export const TextField = (props) => {
             </label>
             <div className="mt-2">
             <input
+                value={value}
                 data-testid={dataTestId}
+                onChange={ e => onChange(e.target.value)}
                 name={name}
                 type={type}
                 required={required}
@@ -26,8 +28,11 @@ export const TextField = (props) => {
 }
 
 TextField.propTypes = {
+    value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
     dataTestId: PropTypes.string,
     type: PropTypes.string,
     required: PropTypes.bool
+
 }
