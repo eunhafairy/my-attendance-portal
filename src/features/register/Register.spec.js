@@ -17,6 +17,7 @@ describe("Register", () =>{
         it.todo("shows confirm password textbox")  
         it.todo("shows first name textbox")
         it.todo("shows lastname name textbox")  
+        it.todo("shows email textbox")  
         it.todo("shows address textbox")  
         it.todo("shows contact no textbox")
         it.todo("shows birthdate textbox")
