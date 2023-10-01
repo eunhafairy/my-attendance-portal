@@ -21,7 +21,6 @@ describe("Register", () =>{
         it.todo("shows address textbox")  
         it.todo("shows contact no textbox")
         it.todo("shows birthdate textbox")
-        it.todo("shows guardian contact no textbox")
         it.todo("shows submit button")
         it.todo("shows back to login button")
 
